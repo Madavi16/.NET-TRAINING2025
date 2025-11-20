@@ -10,12 +10,14 @@ namespace MultipleInheritance_Demo
     {
         static void Main(string[] args)
         {
-            Customer customer = new Customer();
-            customer.GetProductInfo();
-            customer.GetReview();
+           Customer customer = new Customer();
+            Product ob = customer;
+            Review ob1 = customer;
+            ob.GetProductInfo();
+            ob1.GetReview();
             Console.WriteLine("\n=========Product Details and Customer Reviews=========\n");
-            customer.DisplayProductInfo();
-            customer.DisplayReview();
+            ob.DisplayProductInfo();
+            ob1.DisplayReview();
             Console.ReadKey();
         }
     }
